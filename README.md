@@ -61,7 +61,9 @@ You'll see a full Linux desktop streaming in your browser tab. That is is the ro
 Inside the browser desktop, open a terminal and run:
 
 ```bash
+
 cd ~/ros2_ws
+colcon build
 source install/setup.bash
 ros2 launch my_robot_arm sim.launch.py
 ```
