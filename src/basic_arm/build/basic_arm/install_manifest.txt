@@ -1,3 +1,0 @@
-/root/ros2_ws/src/basic_arm/install/basic_arm/lib/libbasic_arm.so
-/root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/export_basic_armExport.cmake
-/root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/export_basic_armExport-noconfig.cmake

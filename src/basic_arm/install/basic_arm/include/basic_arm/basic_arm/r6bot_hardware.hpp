@@ -1,1 +1,0 @@
-/root/ros2_ws/src/basic_arm/hardware/include/basic_arm/r6bot_hardware.hpp

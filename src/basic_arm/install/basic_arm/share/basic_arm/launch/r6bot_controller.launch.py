@@ -1,1 +1,0 @@
-/root/ros2_ws/src/basic_arm/bringup/launch/r6bot_controller.launch.py

@@ -1,1 +1,0 @@
-/root/ros2_ws/src/basic_arm/build/basic_arm/ament_cmake_core/basic_armConfig.cmake
