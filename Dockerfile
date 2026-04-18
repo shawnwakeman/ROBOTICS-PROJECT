@@ -30,7 +30,6 @@ RUN apt-get update && apt-get install -y \
     libgl1-mesa-dri \
     && rm -rf /var/lib/apt/lists/*
 
-    # Clone the ros2_control demos repository which contains the 6DOF robot example
 # Fix NoVNC index page
 RUN ln -s /usr/share/novnc/vnc.html /usr/share/novnc/index.html || true
 
