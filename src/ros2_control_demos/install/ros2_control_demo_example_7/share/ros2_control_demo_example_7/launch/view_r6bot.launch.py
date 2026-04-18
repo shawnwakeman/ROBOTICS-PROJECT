@@ -1,0 +1,1 @@
+/root/ros2_ws/src/ros2_control_demos/example_7/description/launch/view_r6bot.launch.py
