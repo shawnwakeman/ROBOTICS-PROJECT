@@ -1,0 +1,13 @@
+<library path="basic_arm">
+  <class name="basic_arm/RobotSystem"
+         type="basic_arm::RobotSystem"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Robot hardware plugin</description>
+  </class>
+
+  <class name="basic_arm/RobotController"
+         type="basic_arm::RobotController"
+         base_class_type="controller_interface::ControllerInterface">
+    <description>Robot controller plugin</description>
+  </class>
+</library>

@@ -1,0 +1,1 @@
+/root/ros2_ws/src/basic_arm/build/basic_arm/ament_cmake_environment_hooks/local_setup.zsh

@@ -1,0 +1,1 @@
+/root/ros2_ws/src/basic_arm/bringup/launch/send_trajectory.launch.py

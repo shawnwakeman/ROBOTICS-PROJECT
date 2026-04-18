@@ -1,0 +1,78 @@
+[0.051s] Invoking command in '/root/ros2_ws/src/basic_arm/build/basic_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/ros2_ws/src/basic_arm -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/basic_arm/install/basic_arm
+[0.489s] -- The CXX compiler identification is GNU 13.3.0
+[0.586s] -- Detecting CXX compiler ABI info
+[1.259s] -- Detecting CXX compiler ABI info - done
+[1.276s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.276s] -- Detecting CXX compile features
+[1.277s] -- Detecting CXX compile features - done
+[1.286s] -- Found ros2_control_cmake: 0.3.0 (/opt/ros/jazzy/share/ros2_control_cmake/cmake)
+[1.286s] -- Compiler warnings enabled for GNU
+[1.286s] -- Detected GCC Version: 13.3.0 (Major: 13, Minor: 3)
+[1.289s] -- Found controller_manager: 4.44.0 (/opt/ros/jazzy/share/controller_manager/cmake)
+[1.826s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.966s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.082s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.097s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.113s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.132s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.205s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.210s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.534s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.561s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.598s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.637s] -- Found kdl_parser: 2.11.0 (/opt/ros/jazzy/share/kdl_parser/cmake)
+[3.647s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[3.650s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[3.650s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.840s] -- Configuring done (3.7s)
+[3.908s] -- Generating done (0.1s)
+[3.932s] -- Build files have been written to: /root/ros2_ws/src/basic_arm/build/basic_arm
+[3.942s] Invoked command in '/root/ros2_ws/src/basic_arm/build/basic_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/ros2_ws/src/basic_arm -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/basic_arm/install/basic_arm
+[3.947s] Invoking command in '/root/ros2_ws/src/basic_arm/build/basic_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/basic_arm/build/basic_arm -- -j10 -l10
+[4.357s] [ 20%] [32mBuilding CXX object CMakeFiles/basic_arm.dir/controller/r6bot_controller.cpp.o[0m
+[4.360s] [ 60%] [32mBuilding CXX object CMakeFiles/send_trajectory.dir/reference_generator/send_trajectory.cpp.o[0m
+[4.364s] [ 60%] [32mBuilding CXX object CMakeFiles/basic_arm.dir/hardware/r6bot_hardware.cpp.o[0m
+[9.474s] [ 80%] [32m[1mLinking CXX executable send_trajectory[0m
+[9.879s] [ 80%] Built target send_trajectory
+[12.186s] [100%] [32m[1mLinking CXX shared library libbasic_arm.so[0m
+[12.773s] [100%] Built target basic_arm
+[12.828s] Invoked command in '/root/ros2_ws/src/basic_arm/build/basic_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/basic_arm/build/basic_arm -- -j10 -l10
+[12.885s] Invoking command in '/root/ros2_ws/src/basic_arm/build/basic_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/basic_arm/build/basic_arm
+[12.936s] -- Install configuration: ""
+[12.940s] -- Execute custom install script
+[12.946s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm//basic_arm.xml
+[12.988s] -- Up-to-date symlink: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm//basic_arm.xml
+[12.993s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/include/basic_arm/basic_arm/r6bot_hardware.hpp
+[13.033s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/launch/view_r6bot.launch.py
+[13.072s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/ros2_control/r6bot.ros2_control.xacro
+[13.110s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/urdf/r6bot.urdf.xacro
+[13.149s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/launch/r6bot_controller.launch.py
+[13.187s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/launch/send_trajectory.launch.py
+[13.226s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/config/r6bot_controller.yaml
+[13.265s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/lib/basic_arm/send_trajectory
+[13.305s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/environment/library_path.sh
+[13.344s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/environment/library_path.dsv
+[13.383s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/ament_index/resource_index/package_run_dependencies/basic_arm
+[13.422s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/ament_index/resource_index/parent_prefix_path/basic_arm
+[13.461s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/environment/ament_prefix_path.sh
+[13.500s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/environment/ament_prefix_path.dsv
+[13.539s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/environment/path.sh
+[13.583s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/environment/path.dsv
+[13.624s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/local_setup.bash
+[13.663s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/local_setup.sh
+[13.702s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/local_setup.zsh
+[13.741s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/local_setup.dsv
+[13.779s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/package.dsv
+[13.818s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/ament_index/resource_index/packages/basic_arm
+[13.857s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/basic_arm
+[13.898s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/ament_index/resource_index/controller_interface__pluginlib__plugin/basic_arm
+[13.937s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/ament_cmake_export_targets-extras.cmake
+[13.976s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.015s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/basic_armConfig.cmake
+[14.055s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/basic_armConfig-version.cmake
+[14.094s] -- Symlinking: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/package.xml
+[14.133s] -- Installing: /root/ros2_ws/src/basic_arm/install/basic_arm/lib/libbasic_arm.so
+[14.162s] -- Set non-toolchain portion of runtime path of "/root/ros2_ws/src/basic_arm/install/basic_arm/lib/libbasic_arm.so" to ""
+[14.163s] -- Installing: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/export_basic_armExport.cmake
+[14.165s] -- Installing: /root/ros2_ws/src/basic_arm/install/basic_arm/share/basic_arm/cmake/export_basic_armExport-noconfig.cmake
+[14.175s] Invoked command in '/root/ros2_ws/src/basic_arm/build/basic_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/basic_arm/build/basic_arm
