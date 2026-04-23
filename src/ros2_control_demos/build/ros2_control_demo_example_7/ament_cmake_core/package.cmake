@@ -5,7 +5,7 @@ set(ros2_control_demo_example_7_BUILD_DEPENDS "ros2_control_cmake" "backward_ros
 set(ros2_control_demo_example_7_BUILDTOOL_DEPENDS "ament_cmake")
 set(ros2_control_demo_example_7_BUILD_EXPORT_DEPENDS "backward_ros" "control_msgs" "controller_interface" "hardware_interface" "kdl_parser" "pluginlib" "rclcpp_lifecycle" "rclcpp" "realtime_tools" "trajectory_msgs")
 set(ros2_control_demo_example_7_BUILDTOOL_EXPORT_DEPENDS )
-set(ros2_control_demo_example_7_EXEC_DEPENDS "controller_manager" "joint_state_broadcaster" "joint_state_publisher_gui" "launch_ros" "launch" "robot_state_publisher" "ros2_control_demo_description" "ros2controlcli" "ros2launch" "rviz2" "urdf" "xacro" "backward_ros" "control_msgs" "controller_interface" "hardware_interface" "kdl_parser" "pluginlib" "rclcpp_lifecycle" "rclcpp" "realtime_tools" "trajectory_msgs")
+set(ros2_control_demo_example_7_EXEC_DEPENDS "controller_manager" "forward_command_controller" "joint_state_broadcaster" "joint_state_publisher_gui" "launch_ros" "launch" "robot_state_publisher" "ros2_control_demo_description" "ros2controlcli" "ros2launch" "rviz2" "urdf" "xacro" "backward_ros" "control_msgs" "controller_interface" "hardware_interface" "kdl_parser" "pluginlib" "rclcpp_lifecycle" "rclcpp" "realtime_tools" "trajectory_msgs")
 set(ros2_control_demo_example_7_TEST_DEPENDS "ament_cmake_pytest" "ament_cmake_ros" "launch_testing_ament_cmake" "launch_testing" "launch" "liburdfdom-tools" "rclpy")
 set(ros2_control_demo_example_7_GROUP_DEPENDS )
 set(ros2_control_demo_example_7_MEMBER_OF_GROUPS )

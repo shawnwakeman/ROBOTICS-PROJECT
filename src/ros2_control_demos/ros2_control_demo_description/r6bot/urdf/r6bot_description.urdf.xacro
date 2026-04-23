@@ -134,6 +134,76 @@
     <origin xyz="0 0 0.185" rpy="0 0 0"/>
   </joint>
 
+  <link name="left_finger">
+    <visual>
+      <geometry><box size="0.02 0.05 0.1"/></geometry>
+      <material name="grey"><color rgba="0.5 0.5 0.5 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="0.02 0.05 0.1"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Gripper Right Finger -->
+  <link name="right_finger">
+    <visual>
+      <geometry><box size="0.02 0.05 0.1"/></geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry><box size="0.02 0.05 0.1"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="gripper_left_joint" type="prismatic">
+    <parent link="tool0"/>
+    <child link="left_finger"/>
+    <origin xyz="0 0.05 0.05" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" lower="-0.04" upper="0" velocity="0.2"/>
+  </joint>
+
+  <joint name="gripper_right_joint" type="prismatic">
+    <parent link="tool0"/>
+    <child link="right_finger"/>
+    <origin xyz="0 -0.05 0.05" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" lower="0" upper="0.04" velocity="0.2"/>
+    <!-- In a real robot, this often mimics the left joint -->
+  </joint>
+
+
+
 </xacro:macro>
+
+  <gazebo reference="left_finger">
+    <mu1>1000.0</mu1>
+    <mu2>1000.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="right_finger">
+    <mu1>1000.0</mu1>
+    <mu2>1000.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find ros2_control_demo_example_7)/config/r6bot_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
 
 </robot>
