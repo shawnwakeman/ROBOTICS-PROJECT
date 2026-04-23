@@ -2,16 +2,14 @@ services:
   ros_gazebo:
     build: .
     container_name: jazzy_harmonic_sim
+    platform: linux/arm64 # <-- FORCE APPLE SILICON NATIVE
     privileged: true
     network_mode: bridge
     ports:
-      # Port for the web browser
       - "8080:8080"
     environment:
-      # Tell all terminal sessions to use the virtual screen
       - DISPLAY=:0
-      # Use high-performance CPU software rendering (Mesa LLVMPipe)
       - LIBGL_ALWAYS_SOFTWARE=1
       - GALLIUM_DRIVER=llvmpipe
     volumes:
-          - ./src:/root/ros2_ws/src
+      - ./src:/root/ros2_ws/src
