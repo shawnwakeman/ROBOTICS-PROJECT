@@ -52,8 +52,13 @@ echo "👉 Open your Mac browser and go to: http://localhost:8080"\n\
 echo "========================================================="\n\
 tail -f /dev/null' > /root/entrypoint.sh
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    x11-utils net-tools \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY entrypoint.sh /root/entrypoint.sh
 RUN chmod +x /root/entrypoint.sh
-RUN echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc
+
 
 WORKDIR /root/ros2_ws
 CMD ["/root/entrypoint.sh"]
