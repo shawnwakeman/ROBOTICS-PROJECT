@@ -6,8 +6,11 @@
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/ros2_control/r6bot.ros2_control.xacro
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/urdf/r6bot.urdf.xacro
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/r6bot_controller.launch.py
+/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/r6bot_full.launch.py
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/r6bot_gazebo.launch.py
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/send_trajectory.launch.py
+/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/config/moveit.yaml
+/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/config/r6bot.srdf
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/config/r6bot_controller.yaml
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/ros2_control_demo_example_7/send_trajectory
 /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/environment/library_path.sh

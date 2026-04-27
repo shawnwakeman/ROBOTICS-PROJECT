@@ -7,6 +7,7 @@
 			"install",
 			"include",
 			"find_package",
+			"ament_cmake_symlink_install_programs",
 			"ament_cmake_symlink_install_targets",
 			"ament_execute_extensions",
 			"ament_package"
@@ -19,6 +20,7 @@
 			"/opt/ros/jazzy/share/controller_manager/cmake/ament_cmake_export_dependencies-extras.cmake",
 			"/opt/ros/jazzy/share/controller_manager/cmake/controller_managerConfig.cmake",
 			"CMakeLists.txt",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_programs.cmake",
 			"/opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake",
 			"/opt/ros/jazzy/share/ament_cmake_export_targets/cmake/ament_cmake_export_targets_package_hook.cmake",
 			"/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
@@ -84,54 +86,90 @@
 			{
 				"command" : 1,
 				"file" : 5,
-				"line" : 102,
+				"line" : 104,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 37,
+				"line" : 34,
 				"parent" : 11
 			},
 			{
 				"command" : 0,
 				"file" : 6,
-				"line" : 50,
+				"line" : 39,
 				"parent" : 12
 			},
 			{
-				"command" : 6,
+				"command" : 1,
 				"file" : 5,
-				"line" : 127,
+				"line" : 108,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 14
+			},
+			{
+				"command" : 0,
+				"file" : 6,
+				"line" : 39,
+				"parent" : 15
+			},
+			{
+				"command" : 1,
+				"file" : 5,
+				"line" : 112,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
-				"file" : 9,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 17
+			},
+			{
+				"command" : 0,
+				"file" : 7,
+				"line" : 50,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 136,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 10,
 				"line" : 66,
-				"parent" : 14
+				"parent" : 20
 			},
 			{
 				"command" : 2,
-				"file" : 8,
+				"file" : 9,
 				"line" : 48,
-				"parent" : 15
+				"parent" : 21
 			},
 			{
-				"file" : 7,
-				"parent" : 16
+				"file" : 8,
+				"parent" : 22
 			},
 			{
 				"command" : 1,
-				"file" : 7,
+				"file" : 8,
 				"line" : 28,
-				"parent" : 17
+				"parent" : 23
 			},
 			{
 				"command" : 0,
 				"file" : 0,
 				"line" : 43,
-				"parent" : 18
+				"parent" : 24
 			}
 		]
 	},
@@ -146,6 +184,32 @@
 		{
 			"backtrace" : 13,
 			"component" : "Unspecified",
+			"destination" : "lib/ros2_control_demo_example_7",
+			"paths" : 
+			[
+				{
+					"from" : "scripts/perception_node.py",
+					"to" : "perception_node"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "lib/ros2_control_demo_example_7",
+			"paths" : 
+			[
+				{
+					"from" : "scripts/pick_and_place_node.py",
+					"to" : "pick_and_place_node"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 19,
+			"component" : "Unspecified",
 			"destination" : "lib",
 			"paths" : 
 			[
@@ -156,7 +220,7 @@
 			"type" : "target"
 		},
 		{
-			"backtrace" : 19,
+			"backtrace" : 25,
 			"component" : "Unspecified",
 			"destination" : "share/ros2_control_demo_example_7/cmake",
 			"exportName" : "export_ros2_control_demo_example_7",

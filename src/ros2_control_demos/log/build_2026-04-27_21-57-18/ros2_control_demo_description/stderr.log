@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:54 (file):
+  file INSTALL cannot find
+  "/root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description/scripts/pick_and_place_node.py":
+  No such file or directory.
+
+[0m

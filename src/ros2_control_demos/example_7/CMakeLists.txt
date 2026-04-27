@@ -27,7 +27,7 @@ find_package(controller_manager 4.0.0)
 # Handle the case where the required version is not found
 if(NOT controller_manager_FOUND)
   message(FATAL_ERROR "ros2_control version 4.0.0 or higher is required. "
-  "Are you using the correct branch of the ros2_control_demos repository?")
+    "Are you using the correct branch of the ros2_control_demos repository?")
 endif()
 
 # find dependencies
@@ -45,7 +45,6 @@ endforeach()
 
 ## COMPILE
 add_executable(send_trajectory reference_generator/send_trajectory.cpp)
-
 target_link_libraries(send_trajectory PUBLIC
   ${trajectory_msgs_TARGETS}
   kdl_parser::kdl_parser
@@ -58,12 +57,11 @@ add_library(
   hardware/r6bot_hardware.cpp
   controller/r6bot_controller.cpp
 )
-
 target_compile_features(ros2_control_demo_example_7 PUBLIC cxx_std_17)
 target_include_directories(ros2_control_demo_example_7 PUBLIC
-$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/hardware/include>
-$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/controller/include>
-$<INSTALL_INTERFACE:include/ros2_control_demo_example_7>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/hardware/include>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/controller/include>
+  $<INSTALL_INTERFACE:include/ros2_control_demo_example_7>
 )
 target_link_libraries(ros2_control_demo_example_7 PUBLIC
   ${trajectory_msgs_TARGETS}
@@ -83,21 +81,33 @@ install(
   DIRECTORY hardware/include/
   DESTINATION include/ros2_control_demo_example_7
 )
+
 install(DIRECTORY worlds/
   DESTINATION share/${PROJECT_NAME}/worlds
 )
+
 install(
   DIRECTORY description/launch description/ros2_control description/urdf
   DESTINATION share/ros2_control_demo_example_7
 )
+
 install(
   DIRECTORY bringup/launch bringup/config
   DESTINATION share/ros2_control_demo_example_7
 )
+
 install(
-    TARGETS send_trajectory
-    RUNTIME DESTINATION lib/ros2_control_demo_example_7
+  TARGETS send_trajectory
+  RUNTIME DESTINATION lib/ros2_control_demo_example_7
 )
+
+install(PROGRAMS scripts/perception_node.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME perception_node)
+
+install(PROGRAMS scripts/pick_and_place_node.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME pick_and_place_node)
 
 install(TARGETS ros2_control_demo_example_7
   EXPORT export_ros2_control_demo_example_7
@@ -109,7 +119,6 @@ install(TARGETS ros2_control_demo_example_7
 if(BUILD_TESTING)
   find_package(ament_cmake_pytest REQUIRED)
   ament_add_pytest_test(example_7_urdf_xacro test/test_urdf_xacro.py)
-
   # Integration (launch) tests
   find_package(ament_cmake_ros REQUIRED)
   find_package(launch_testing_ament_cmake REQUIRED)

@@ -18,14 +18,6 @@ install(
   DESTINATION share/${PROJECT_NAME}/carlikebot
 )
 
-install(PROGRAMS scripts/perception_node.py
-  DESTINATION lib/${PROJECT_NAME}
-  RENAME perception_node)
-
-install(PROGRAMS scripts/pick_and_place_node.py
-  DESTINATION lib/${PROJECT_NAME}
-  RENAME pick_and_place_node)
-  
 install(
   DIRECTORY r3bot/urdf
   DESTINATION share/${PROJECT_NAME}/r3bot
