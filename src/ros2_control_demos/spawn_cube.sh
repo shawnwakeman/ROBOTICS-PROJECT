@@ -18,7 +18,7 @@ TABLE_X=${1:?  "Usage: bash spawn_cube.sh X Y [rotation_deg] [color] [size]"}
 TABLE_Y=${2:?  "Provide Y (0-1.6, back to front)"}
 ROT_DEG=${3:-0}
 COLOR=${4:-red}
-SIZE=${5:-0.04}
+SIZE=${5:-0.08}
 MASS=0.05
 
 # Convert table coords to world coords and degrees to radians using awk
