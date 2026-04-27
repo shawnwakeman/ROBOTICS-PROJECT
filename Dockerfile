@@ -1,6 +1,5 @@
 # Native Apple Silicon compatible image
 FROM osrf/ros:jazzy-desktop
-
 ENV DEBIAN_FRONTEND=noninteractive
 
 # 1. Add the official Gazebo repository
@@ -30,6 +29,18 @@ RUN apt-get update && apt-get install -y \
     x11-utils \
     net-tools \
     netcat-openbsd \
+    && rm -rf /var/lib/apt/lists/*
+
+# 3. MoveIt + perception dependencies
+RUN apt-get update && apt-get install -y \
+    ros-jazzy-moveit \
+    ros-jazzy-moveit-ros-planning-interface \
+    ros-jazzy-moveit-ros-move-group \
+    python3-opencv \
+    ros-jazzy-cv-bridge \
+    ros-jazzy-tf2-ros \
+    ros-jazzy-tf2-geometry-msgs \
+    tmux \
     && rm -rf /var/lib/apt/lists/*
 
 # Fix NoVNC index page
