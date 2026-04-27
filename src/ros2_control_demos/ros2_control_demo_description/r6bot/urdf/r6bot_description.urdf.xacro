@@ -85,66 +85,66 @@
 
     <!-- ====== SHELLED BINS ====== -->
     <!-- Macro to create an open-top container (5 distinct collision boxes) -->
-    <xacro:macro name="shelled_bin" params="prefix color_name rgba x y">
+<xacro:macro name="shelled_bin" params="prefix color_name rgba x y">
       <link name="${prefix}_bin">
         <!-- Bottom Plate -->
         <visual>
           <origin xyz="0 0 0.01"/>
-          <geometry><box size="0.3 0.3 0.02"/></geometry>
+          <geometry><box size="0.38 0.38 0.02"/></geometry>
           <material name="${color_name}"><color rgba="${rgba}"/></material>
         </visual>
         <collision>
           <origin xyz="0 0 0.01"/>
-          <geometry><box size="0.3 0.3 0.02"/></geometry>
+          <geometry><box size="0.38 0.38 0.02"/></geometry>
         </collision>
-        
+
         <!-- Front Wall -->
         <visual>
-          <origin xyz="0 0.14 0.1"/>
-          <geometry><box size="0.3 0.02 0.2"/></geometry>
+          <origin xyz="0 0.18 0.17"/>
+          <geometry><box size="0.38 0.02 0.30"/></geometry>
           <material name="${color_name}"/>
         </visual>
         <collision>
-          <origin xyz="0 0.14 0.1"/>
-          <geometry><box size="0.3 0.02 0.2"/></geometry>
+          <origin xyz="0 0.18 0.17"/>
+          <geometry><box size="0.38 0.02 0.30"/></geometry>
         </collision>
 
         <!-- Back Wall -->
         <visual>
-          <origin xyz="0 -0.14 0.1"/>
-          <geometry><box size="0.3 0.02 0.2"/></geometry>
+          <origin xyz="0 -0.18 0.17"/>
+          <geometry><box size="0.38 0.02 0.30"/></geometry>
           <material name="${color_name}"/>
         </visual>
         <collision>
-          <origin xyz="0 -0.14 0.1"/>
-          <geometry><box size="0.3 0.02 0.2"/></geometry>
+          <origin xyz="0 -0.18 0.17"/>
+          <geometry><box size="0.38 0.02 0.30"/></geometry>
         </collision>
 
         <!-- Left Wall -->
         <visual>
-          <origin xyz="-0.14 0 0.1"/>
-          <geometry><box size="0.02 0.26 0.2"/></geometry>
+          <origin xyz="-0.18 0 0.17"/>
+          <geometry><box size="0.02 0.34 0.30"/></geometry>
           <material name="${color_name}"/>
         </visual>
         <collision>
-          <origin xyz="-0.14 0 0.1"/>
-          <geometry><box size="0.02 0.26 0.2"/></geometry>
+          <origin xyz="-0.18 0 0.17"/>
+          <geometry><box size="0.02 0.34 0.30"/></geometry>
         </collision>
 
         <!-- Right Wall -->
         <visual>
-          <origin xyz="0.14 0 0.1"/>
-          <geometry><box size="0.02 0.26 0.2"/></geometry>
+          <origin xyz="0.18 0 0.17"/>
+          <geometry><box size="0.02 0.34 0.30"/></geometry>
           <material name="${color_name}"/>
         </visual>
         <collision>
-          <origin xyz="0.14 0 0.1"/>
-          <geometry><box size="0.02 0.26 0.2"/></geometry>
+          <origin xyz="0.18 0 0.17"/>
+          <geometry><box size="0.02 0.34 0.30"/></geometry>
         </collision>
 
         <inertial>
           <mass value="1.5"/>
-          <origin xyz="0 0 0.1"/>
+          <origin xyz="0 0 0.17"/>
           <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
         </inertial>
       </link>
@@ -152,16 +152,14 @@
       <joint name="${prefix}_bin_joint" type="fixed">
         <parent link="table"/>
         <child link="${prefix}_bin"/>
-        <!-- Placed perfectly on top of the table (Z=0.75) -->
         <origin xyz="${x} ${y} 0.75" rpy="0 0 0"/>
       </joint>
     </xacro:macro>
 
     <!-- Spawn the 3 bins hanging off the right edge of the table -->
-    <xacro:shelled_bin prefix="red" color_name="BinRed" rgba="0.8 0.1 0.1 1.0" x="1.15" y="-0.4"/>
-    <xacro:shelled_bin prefix="green" color_name="BinGreen" rgba="0.1 0.8 0.1 1.0" x="1.15" y="0.0"/>
-    <xacro:shelled_bin prefix="blue" color_name="BinBlue" rgba="0.1 0.1 0.8 1.0" x="1.15" y="0.4"/>
-
+    <xacro:shelled_bin prefix="red" color_name="BinRed" rgba="0.8 0.1 0.1 1.0" x="1.05" y="-0.4"/>
+    <xacro:shelled_bin prefix="green" color_name="BinGreen" rgba="0.1 0.8 0.1 1.0" x="1.05" y="0.0"/>
+    <xacro:shelled_bin prefix="blue" color_name="BinBlue" rgba="0.1 0.1 0.8 1.0" x="1.05" y="0.4"/>
     <!-- ====== ARM LINKS ====== -->
     <xacro:create_link
         link_name="base_link"
