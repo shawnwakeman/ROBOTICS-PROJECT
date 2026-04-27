@@ -81,6 +81,18 @@ def generate_launch_description():
         output="screen",
     )
 
+    camera_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=[
+            "/overhead_camera/image@sensor_msgs/msg/Image[gz.msgs.Image",
+            "/overhead_camera/depth_image@sensor_msgs/msg/Image[gz.msgs.Image",
+            "/overhead_camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo",
+            "/overhead_camera/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked",
+        ],
+        output="screen",
+    )
+
     # Publish robot description to /robot_description
     robot_state_pub_node = Node(
         package="robot_state_publisher",
@@ -117,6 +129,7 @@ def generate_launch_description():
             gz_clock_bridge,
             robot_state_pub_node,
             gz_spawn_entity,
+            camera_bridge,
             joint_state_broadcaster_spawner,
             delay_robot_controller,
         ]
