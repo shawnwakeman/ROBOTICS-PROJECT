@@ -1,0 +1,259 @@
+[0.099s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.100s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=10, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ffffe1ca9c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ffffe326ff0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ffffe326ff0>>, mixin_verb=('build',))
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.133s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.133s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.133s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.134s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/ros2_ws/src/ros2_control_demos'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(example_7) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'example_7' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_7'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demo_description) by extension 'ros'
+[0.165s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_control_demo_description' with type 'ros.ament_cmake' and name 'ros2_control_demo_description'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extensions ['colcon_meta']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_control_demos) by extension 'ros'
+[0.166s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_control_demos' with type 'ros.ament_cmake' and name 'ros2_control_demos'
+[0.166s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.166s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.166s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.166s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.166s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.178s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_args' from command line to 'None'
+[0.178s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_target' from command line to 'None'
+[0.178s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.178s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.178s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_control_demo_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description', 'merge_install': False, 'path': '/root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description', 'symlink_install': True, 'test_result_base': None}
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_7' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_control_demo_example_7' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7', 'merge_install': False, 'path': '/root/ros2_ws/src/ros2_control_demos/example_7', 'symlink_install': True, 'test_result_base': None}
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'cmake_args' from command line to 'None'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'cmake_target' from command line to 'None'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'cmake_clean_first' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'cmake_force_configure' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'ament_cmake_args' from command line to 'None'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.180s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_control_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos', 'merge_install': False, 'path': '/root/ros2_ws/src/ros2_control_demos/ros2_control_demos', 'symlink_install': True, 'test_result_base': None}
+[0.180s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.182s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.183s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description' with build type 'ament_cmake'
+[0.183s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description'
+[0.186s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.186s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.186s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description -- -j10 -l10
+[0.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description -- -j10 -l10
+[0.493s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description
+[0.609s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_description)
+[0.611s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description' for CMake module files
+[0.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description
+[0.613s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description' for CMake config files
+[0.616s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_description', 'cmake_prefix_path')
+[0.617s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.ps1'
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.dsv'
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.sh'
+[0.619s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/bin'
+[0.619s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/lib/pkgconfig/ros2_control_demo_description.pc'
+[0.620s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/lib/python3.12/site-packages'
+[0.621s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/bin'
+[0.621s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.ps1'
+[0.622s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv'
+[0.622s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.sh'
+[0.623s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.bash'
+[0.624s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.zsh'
+[0.624s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/colcon-core/packages/ros2_control_demo_description)
+[0.626s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_description)
+[0.626s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description' for CMake module files
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description' for CMake config files
+[0.631s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_description', 'cmake_prefix_path')
+[0.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.ps1'
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.dsv'
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.sh'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/bin'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/lib/pkgconfig/ros2_control_demo_description.pc'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/lib/python3.12/site-packages'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/bin'
+[0.633s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.ps1'
+[0.634s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv'
+[0.634s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.sh'
+[0.635s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.bash'
+[0.635s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.zsh'
+[0.635s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/colcon-core/packages/ros2_control_demo_description)
+[0.636s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/ros2_ws/src/ros2_control_demos/example_7' with build type 'ament_cmake'
+[0.636s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/ros2_ws/src/ros2_control_demos/example_7'
+[0.636s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.637s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.678s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7 -- -j10 -l10
+[1.120s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7' returned '0': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7 -- -j10 -l10
+[1.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7
+[1.239s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_example_7)
+[1.239s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7' for CMake module files
+[1.240s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7' returned '0': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7
+[1.242s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7' for CMake config files
+[1.243s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_7', 'cmake_prefix_path')
+[1.243s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/cmake_prefix_path.ps1'
+[1.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/cmake_prefix_path.dsv'
+[1.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/cmake_prefix_path.sh'
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib'
+[1.246s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_7', 'ld_library_path_lib')
+[1.246s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/ld_library_path_lib.ps1'
+[1.246s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/ld_library_path_lib.dsv'
+[1.246s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/ld_library_path_lib.sh'
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/bin'
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/pkgconfig/ros2_control_demo_example_7.pc'
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/python3.12/site-packages'
+[1.247s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/bin'
+[1.248s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.ps1'
+[1.248s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.dsv'
+[1.249s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.sh'
+[1.250s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.bash'
+[1.250s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.zsh'
+[1.250s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/colcon-core/packages/ros2_control_demo_example_7)
+[1.252s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_example_7)
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7' for CMake module files
+[1.253s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7' for CMake config files
+[1.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_7', 'cmake_prefix_path')
+[1.254s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/cmake_prefix_path.ps1'
+[1.255s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/cmake_prefix_path.dsv'
+[1.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/cmake_prefix_path.sh'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib'
+[1.256s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_7', 'ld_library_path_lib')
+[1.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/ld_library_path_lib.ps1'
+[1.257s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/ld_library_path_lib.dsv'
+[1.257s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/hook/ld_library_path_lib.sh'
+[1.257s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/bin'
+[1.257s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/pkgconfig/ros2_control_demo_example_7.pc'
+[1.258s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/python3.12/site-packages'
+[1.258s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/bin'
+[1.258s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.ps1'
+[1.258s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.dsv'
+[1.259s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.sh'
+[1.259s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.bash'
+[1.260s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.zsh'
+[1.260s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/colcon-core/packages/ros2_control_demo_example_7)
+[1.260s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/ros2_ws/src/ros2_control_demos/ros2_control_demos' with build type 'ament_cmake'
+[1.261s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/ros2_ws/src/ros2_control_demos/ros2_control_demos'
+[1.261s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.261s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.320s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos -- -j10 -l10
+[1.537s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos -- -j10 -l10
+[1.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos
+[1.644s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demos)
+[1.645s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos' for CMake module files
+[1.645s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos
+[1.646s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos' for CMake config files
+[1.648s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demos', 'cmake_prefix_path')
+[1.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/hook/cmake_prefix_path.ps1'
+[1.648s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/hook/cmake_prefix_path.dsv'
+[1.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/hook/cmake_prefix_path.sh'
+[1.649s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/bin'
+[1.650s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/lib/pkgconfig/ros2_control_demos.pc'
+[1.650s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/lib/python3.12/site-packages'
+[1.650s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/bin'
+[1.650s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.ps1'
+[1.651s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.dsv'
+[1.651s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.sh'
+[1.651s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.bash'
+[1.652s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.zsh'
+[1.652s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/colcon-core/packages/ros2_control_demos)
+[1.652s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demos)
+[1.653s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos' for CMake module files
+[1.654s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos' for CMake config files
+[1.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demos', 'cmake_prefix_path')
+[1.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/hook/cmake_prefix_path.ps1'
+[1.656s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/hook/cmake_prefix_path.dsv'
+[1.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/hook/cmake_prefix_path.sh'
+[1.657s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/bin'
+[1.657s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/lib/pkgconfig/ros2_control_demos.pc'
+[1.657s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/lib/python3.12/site-packages'
+[1.657s] Level 1:colcon.colcon_core.environment:checking '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/bin'
+[1.657s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.ps1'
+[1.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.dsv'
+[1.658s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.sh'
+[1.658s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.bash'
+[1.659s] INFO:colcon.colcon_core.shell:Creating package script '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.zsh'
+[1.659s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/colcon-core/packages/ros2_control_demos)
+[1.659s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.660s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.660s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.660s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.665s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.665s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.665s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.665s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.669s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[1.669s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.669s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/ros2_ws/src/ros2_control_demos/install/local_setup.ps1'
+[1.670s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/ros2_ws/src/ros2_control_demos/install/_local_setup_util_ps1.py'
+[1.671s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/ros2_ws/src/ros2_control_demos/install/setup.ps1'
+[1.672s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/ros2_ws/src/ros2_control_demos/install/local_setup.sh'
+[1.672s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/ros2_ws/src/ros2_control_demos/install/_local_setup_util_sh.py'
+[1.672s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/ros2_ws/src/ros2_control_demos/install/setup.sh'
+[1.673s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/ros2_ws/src/ros2_control_demos/install/local_setup.bash'
+[1.673s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/ros2_ws/src/ros2_control_demos/install/setup.bash'
+[1.674s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/ros2_ws/src/ros2_control_demos/install/local_setup.zsh'
+[1.675s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/ros2_ws/src/ros2_control_demos/install/setup.zsh'

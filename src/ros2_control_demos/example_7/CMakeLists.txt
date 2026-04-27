@@ -83,6 +83,9 @@ install(
   DIRECTORY hardware/include/
   DESTINATION include/ros2_control_demo_example_7
 )
+install(DIRECTORY worlds/
+  DESTINATION share/${PROJECT_NAME}/worlds
+)
 install(
   DIRECTORY description/launch description/ros2_control description/urdf
   DESTINATION share/ros2_control_demo_example_7

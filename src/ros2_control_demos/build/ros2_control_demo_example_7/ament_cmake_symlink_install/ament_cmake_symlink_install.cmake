@@ -324,6 +324,9 @@ ament_cmake_symlink_install_files("/root/ros2_ws/src/ros2_control_demos/example_
 # install(DIRECTORY "hardware/include/" "DESTINATION" "include/ros2_control_demo_example_7")
 ament_cmake_symlink_install_directory("/root/ros2_ws/src/ros2_control_demos/example_7" DIRECTORY "hardware/include/" "DESTINATION" "include/ros2_control_demo_example_7")
 
+# install(DIRECTORY "worlds/" "DESTINATION" "share/ros2_control_demo_example_7/worlds")
+ament_cmake_symlink_install_directory("/root/ros2_ws/src/ros2_control_demos/example_7" DIRECTORY "worlds/" "DESTINATION" "share/ros2_control_demo_example_7/worlds")
+
 # install(DIRECTORY "description/launch" "description/ros2_control" "description/urdf" "DESTINATION" "share/ros2_control_demo_example_7")
 ament_cmake_symlink_install_directory("/root/ros2_ws/src/ros2_control_demos/example_7" DIRECTORY "description/launch" "description/ros2_control" "description/urdf" "DESTINATION" "share/ros2_control_demo_example_7")
 
