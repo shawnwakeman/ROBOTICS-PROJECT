@@ -50,13 +50,16 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            "gz_args": PathJoinSubstitution(
-                [
-                    FindPackageShare("ros2_control_demo_example_7"),
-                    "worlds",
-                    "empty.sdf",
-                ]
-            )
+            "gz_args": [
+                "-r ",
+                PathJoinSubstitution(
+                    [
+                        FindPackageShare("ros2_control_demo_example_7"),
+                        "worlds",
+                        "empty.sdf",
+                    ]
+                ),
+            ]
         }.items(),
     )
 
@@ -71,6 +74,12 @@ def generate_launch_description():
         ],
         output="screen",
     )
+    gz_clock_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=["/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock"],
+        output="screen",
+    )
 
     # Publish robot description to /robot_description
     robot_state_pub_node = Node(
@@ -79,6 +88,7 @@ def generate_launch_description():
         output="both",
         parameters=[robot_description, {"use_sim_time": True}],
     )
+    
 
     # Spawn joint_state_broadcaster
     joint_state_broadcaster_spawner = Node(
@@ -104,6 +114,7 @@ def generate_launch_description():
     return LaunchDescription(
         [
             gazebo,
+            gz_clock_bridge,
             robot_state_pub_node,
             gz_spawn_entity,
             joint_state_broadcaster_spawner,
