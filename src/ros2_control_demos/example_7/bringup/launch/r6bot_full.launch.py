@@ -108,20 +108,20 @@ def generate_launch_description():
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_state_broadcaster", "--param-file", robot_controllers],
+        arguments=["joint_state_broadcaster", "--param-file", robot_controllers, "--controller-manager-timeout", "60"],
     )
 
     # Spawn robot controller after joint_state_broadcaster
     robot_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["r6bot_controller", "--param-file", robot_controllers],
+        arguments=["r6bot_controller", "--param-file", robot_controllers, "--controller-manager-timeout", "60"],
     )
 
     gripper_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["gripper_controller", "--param-file", robot_controllers],
+        arguments=["gripper_controller", "--param-file", robot_controllers, "--controller-manager-timeout", "60"],
     )
 
     delay_robot_controller = RegisterEventHandler(
@@ -147,20 +147,20 @@ def generate_launch_description():
         parameters=[{"use_sim_time": True}],
     )
 
-    # Joint sweep demo — starts after controllers are active
-    joint_sweep_demo_node = Node(
-        package="ros2_control_demo_example_7",
-        executable="joint_sweep_demo",
-        output="screen",
-        parameters=[{"use_sim_time": True}],
-    )
 
-    delay_joint_sweep = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=robot_controller_spawner,
-            on_exit=[joint_sweep_demo_node],
-        )
-    )
+    # joint_sweep_demo_node = Node(
+    #     package="ros2_control_demo_example_7",
+    #     executable="joint_sweep_demo",
+    #     output="screen",
+    #     parameters=[{"use_sim_time": True}],
+    # )
+
+    # delay_joint_sweep = RegisterEventHandler(
+    #     event_handler=OnProcessExit(
+    #         target_action=robot_controller_spawner,
+    #         on_exit=[joint_sweep_demo_node],
+    #     )
+    # )
 
     return LaunchDescription(
         [
@@ -171,7 +171,7 @@ def generate_launch_description():
             gz_spawn_entity,
             joint_state_broadcaster_spawner,
             delay_robot_controller,
-            delay_joint_sweep,
+            # delay_joint_sweep,
             TimerAction(period=15.0, actions=[perception_node]),
             TimerAction(period=20.0, actions=[pick_and_place_node]),
         ]

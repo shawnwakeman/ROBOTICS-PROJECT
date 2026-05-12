@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y \
     netcat-openbsd \
     && rm -rf /var/lib/apt/lists/*
 
-# 3. MoveIt + perception dependencies
+# 3. MoveIt, perception + IK dependencies
 RUN apt-get update && apt-get install -y \
     ros-jazzy-moveit \
     ros-jazzy-moveit-ros-planning-interface \
@@ -41,12 +41,17 @@ RUN apt-get update && apt-get install -y \
     ros-jazzy-tf2-ros \
     ros-jazzy-tf2-geometry-msgs \
     tmux \
+    python3-pip \
+    python3-scipy \
     && rm -rf /var/lib/apt/lists/*
+
+# Install ikpy for pure-python Inverse Kinematics
+RUN pip3 install ikpy --break-system-packages
 
 # Fix NoVNC index page
 RUN ln -s /usr/share/novnc/vnc.html /usr/share/novnc/index.html || true
 
-# 3. Copy your specific startup script
+# 4. Copy your specific startup script
 COPY entrypoint.sh /root/entrypoint.sh
 RUN chmod +x /root/entrypoint.sh
 

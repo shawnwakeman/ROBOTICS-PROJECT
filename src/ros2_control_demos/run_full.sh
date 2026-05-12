@@ -3,7 +3,7 @@
 # Usage: bash run_full.sh [num_cubes]
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-N_CUBES=${1:-5}
+N_CUBES=${1:-1}
 
 # ---------- Kill any leftover processes ----------
 pkill -f gz 2>/dev/null || true

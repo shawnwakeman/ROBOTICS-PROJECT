@@ -5,7 +5,7 @@
 #   N:    number of cubes (default: 5)
 #   size: cube side length in meters (default: 0.04)
 
-N=${1:-5}
+N=${1:-1}
 SIZE=${2:-0.06}
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
