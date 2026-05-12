@@ -1,0 +1,460 @@
+[0.000000] (-) TimerEvent: {}
+[0.001963] (ros2_control_demo_description) JobQueued: {'identifier': 'ros2_control_demo_description', 'dependencies': OrderedDict()}
+[0.002209] (ros2_control_demo_example_7) JobQueued: {'identifier': 'ros2_control_demo_example_7', 'dependencies': OrderedDict({'ros2_control_demo_description': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description'})}
+[0.002283] (ros2_control_demos) JobQueued: {'identifier': 'ros2_control_demos', 'dependencies': OrderedDict({'ros2_control_demo_description': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description', 'ros2_control_demo_example_7': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7'})}
+[0.004291] (ros2_control_demo_description) JobStarted: {'identifier': 'ros2_control_demo_description'}
+[0.040444] (ros2_control_demo_description) JobProgress: {'identifier': 'ros2_control_demo_description', 'progress': 'cmake'}
+[0.041760] (ros2_control_demo_description) Command: {'cmd': ['/usr/bin/cmake', '/root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.098357] (-) TimerEvent: {}
+[0.203314] (-) TimerEvent: {}
+[0.306058] (-) TimerEvent: {}
+[0.407598] (-) TimerEvent: {}
+[0.467983] (ros2_control_demo_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.508402] (-) TimerEvent: {}
+[0.609595] (-) TimerEvent: {}
+[0.710527] (-) TimerEvent: {}
+[0.770237] (ros2_control_demo_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.811653] (-) TimerEvent: {}
+[0.868171] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.912320] (-) TimerEvent: {}
+[1.013534] (-) TimerEvent: {}
+[1.114597] (-) TimerEvent: {}
+[1.216634] (-) TimerEvent: {}
+[1.318555] (-) TimerEvent: {}
+[1.419492] (-) TimerEvent: {}
+[1.520343] (-) TimerEvent: {}
+[1.613975] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.621283] (-) TimerEvent: {}
+[1.636832] (ros2_control_demo_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.637232] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.637672] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.706904] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.722512] (-) TimerEvent: {}
+[1.825058] (-) TimerEvent: {}
+[1.926715] (-) TimerEvent: {}
+[2.029384] (-) TimerEvent: {}
+[2.130994] (-) TimerEvent: {}
+[2.232391] (-) TimerEvent: {}
+[2.333356] (-) TimerEvent: {}
+[2.434622] (-) TimerEvent: {}
+[2.536379] (-) TimerEvent: {}
+[2.638039] (-) TimerEvent: {}
+[2.663109] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.695871] (ros2_control_demo_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.696501] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.697435] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.724400] (ros2_control_demo_description) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[2.738739] (-) TimerEvent: {}
+[2.839744] (-) TimerEvent: {}
+[2.941911] (-) TimerEvent: {}
+[3.044825] (-) TimerEvent: {}
+[3.147087] (-) TimerEvent: {}
+[3.249904] (-) TimerEvent: {}
+[3.351648] (-) TimerEvent: {}
+[3.453375] (-) TimerEvent: {}
+[3.554963] (-) TimerEvent: {}
+[3.657083] (-) TimerEvent: {}
+[3.758637] (-) TimerEvent: {}
+[3.859669] (-) TimerEvent: {}
+[3.888982] (ros2_control_demo_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.960389] (-) TimerEvent: {}
+[4.061838] (-) TimerEvent: {}
+[4.162851] (-) TimerEvent: {}
+[4.211153] (ros2_control_demo_description) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.263518] (-) TimerEvent: {}
+[4.364847] (-) TimerEvent: {}
+[4.468106] (-) TimerEvent: {}
+[4.569890] (-) TimerEvent: {}
+[4.664036] (ros2_control_demo_description) StdoutLine: {'line': b'-- Configuring done (4.5s)\n'}
+[4.670276] (-) TimerEvent: {}
+[4.698789] (ros2_control_demo_description) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.722213] (ros2_control_demo_description) StdoutLine: {'line': b'-- Build files have been written to: /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description\n'}
+[4.739671] (ros2_control_demo_description) CommandEnded: {'returncode': 0}
+[4.753842] (ros2_control_demo_description) JobProgress: {'identifier': 'ros2_control_demo_description', 'progress': 'build'}
+[4.763609] (ros2_control_demo_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', '--', '-j10', '-l10'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.771263] (-) TimerEvent: {}
+[4.873291] (-) TimerEvent: {}
+[4.974621] (-) TimerEvent: {}
+[5.076864] (-) TimerEvent: {}
+[5.178748] (-) TimerEvent: {}
+[5.196137] (ros2_control_demo_description) CommandEnded: {'returncode': 0}
+[5.203722] (ros2_control_demo_description) JobProgress: {'identifier': 'ros2_control_demo_description', 'progress': 'install'}
+[5.280155] (-) TimerEvent: {}
+[5.286052] (ros2_control_demo_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[5.370249] (ros2_control_demo_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.375822] (ros2_control_demo_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.380223] (-) TimerEvent: {}
+[5.392125] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/rrbot/urdf/rrbot.materials.xacro\n'}
+[5.393603] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/rrbot/urdf/rrbot_description.urdf.xacro\n'}
+[5.395133] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/rrbot/rviz/rrbot.rviz\n'}
+[5.396648] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot.materials.xacro\n'}
+[5.397187] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot_description.urdf.xacro\n'}
+[5.398387] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot.rviz\n'}
+[5.398803] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot_view.rviz\n'}
+[5.399959] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/urdf/carlikebot.materials.xacro\n'}
+[5.400471] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/urdf/carlikebot_description.urdf.xacro\n'}
+[5.401549] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/rviz/carlikebot.rviz\n'}
+[5.401948] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/rviz/carlikebot_view.rviz\n'}
+[5.403418] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r3bot/urdf/threedofbot_description.urdf.xacro\n'}
+[5.407015] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_0.stl\n'}
+[5.407469] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_1.stl\n'}
+[5.407944] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_2.stl\n'}
+[5.408371] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_3.stl\n'}
+[5.408815] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_4.stl\n'}
+[5.409247] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_5.stl\n'}
+[5.409715] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_6.stl\n'}
+[5.410113] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_0.dae\n'}
+[5.410682] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_1.dae\n'}
+[5.411121] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_2.dae\n'}
+[5.411554] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_3.dae\n'}
+[5.411946] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_4.dae\n'}
+[5.412338] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_5.dae\n'}
+[5.412762] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_6.dae\n'}
+[5.413812] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/srdf/r6bot.srdf\n'}
+[5.415463] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/urdf/inc/create_link.xacro\n'}
+[5.415980] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/urdf/r6bot_description.urdf.xacro\n'}
+[5.416854] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/rviz/view_robot.rviz\n'}
+[5.417540] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_description\n'}
+[5.418006] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_description\n'}
+[5.418459] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.sh\n'}
+[5.418886] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.dsv\n'}
+[5.419424] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.sh\n'}
+[5.419946] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.dsv\n'}
+[5.420471] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.bash\n'}
+[5.420925] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.sh\n'}
+[5.421361] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.zsh\n'}
+[5.421805] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.dsv\n'}
+[5.422086] (ros2_control_demo_description) StdoutLine: {'line': b'-- Symlinking: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv\n'}
+[5.482506] (-) TimerEvent: {}
+[5.495581] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ament_index/resource_index/packages/ros2_control_demo_description\n'}
+[5.496327] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig.cmake\n'}
+[5.496713] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig-version.cmake\n'}
+[5.497260] (ros2_control_demo_description) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.xml\n'}
+[5.506071] (ros2_control_demo_description) CommandEnded: {'returncode': 0}
+[5.558949] (ros2_control_demo_description) JobEnded: {'identifier': 'ros2_control_demo_description', 'rc': 0}
+[5.564672] (ros2_control_demo_example_7) JobStarted: {'identifier': 'ros2_control_demo_example_7'}
+[5.583335] (-) TimerEvent: {}
+[5.629945] (ros2_control_demo_example_7) JobProgress: {'identifier': 'ros2_control_demo_example_7', 'progress': 'cmake'}
+[5.632239] (ros2_control_demo_example_7) Command: {'cmd': ['/usr/bin/cmake', '/root/ros2_ws/src/ros2_control_demos/example_7', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[5.684407] (-) TimerEvent: {}
+[5.785529] (-) TimerEvent: {}
+[5.886460] (-) TimerEvent: {}
+[5.988343] (-) TimerEvent: {}
+[6.089786] (-) TimerEvent: {}
+[6.191438] (-) TimerEvent: {}
+[6.293120] (-) TimerEvent: {}
+[6.395422] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[6.396143] (-) TimerEvent: {}
+[6.499118] (-) TimerEvent: {}
+[6.559915] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[6.599875] (-) TimerEvent: {}
+[6.700392] (-) TimerEvent: {}
+[6.801588] (-) TimerEvent: {}
+[6.903375] (-) TimerEvent: {}
+[7.005561] (-) TimerEvent: {}
+[7.107617] (-) TimerEvent: {}
+[7.211331] (-) TimerEvent: {}
+[7.312630] (-) TimerEvent: {}
+[7.416420] (-) TimerEvent: {}
+[7.517547] (-) TimerEvent: {}
+[7.618860] (-) TimerEvent: {}
+[7.720366] (-) TimerEvent: {}
+[7.730098] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.765607] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[7.766231] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.767097] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.788243] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found ros2_control_cmake: 0.3.0 (/opt/ros/jazzy/share/ros2_control_cmake/cmake)\n'}
+[7.789892] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Compiler warnings enabled for GNU\n'}
+[7.790141] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Detected GCC Version: 13.3.0 (Major: 13, Minor: 3)\n'}
+[7.799825] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found controller_manager: 4.44.0 (/opt/ros/jazzy/share/controller_manager/cmake)\n'}
+[7.821993] (-) TimerEvent: {}
+[7.925648] (-) TimerEvent: {}
+[8.029497] (-) TimerEvent: {}
+[8.133547] (-) TimerEvent: {}
+[8.235306] (-) TimerEvent: {}
+[8.336567] (-) TimerEvent: {}
+[8.440611] (-) TimerEvent: {}
+[8.543141] (-) TimerEvent: {}
+[8.644777] (-) TimerEvent: {}
+[8.746622] (-) TimerEvent: {}
+[8.812771] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[8.848028] (-) TimerEvent: {}
+[8.949464] (-) TimerEvent: {}
+[9.051400] (-) TimerEvent: {}
+[9.081749] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[9.152386] (-) TimerEvent: {}
+[9.253410] (-) TimerEvent: {}
+[9.354593] (-) TimerEvent: {}
+[9.373963] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[9.407502] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[9.448975] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.455484] (-) TimerEvent: {}
+[9.491255] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.556463] (-) TimerEvent: {}
+[9.657443] (-) TimerEvent: {}
+[9.679393] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[9.693127] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[9.758851] (-) TimerEvent: {}
+[9.860330] (-) TimerEvent: {}
+[9.962267] (-) TimerEvent: {}
+[10.063850] (-) TimerEvent: {}
+[10.165454] (-) TimerEvent: {}
+[10.268084] (-) TimerEvent: {}
+[10.370392] (-) TimerEvent: {}
+[10.425050] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[10.472166] (-) TimerEvent: {}
+[10.483363] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[10.562244] (ros2_control_demo_example_7) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[10.572384] (-) TimerEvent: {}
+[10.675064] (-) TimerEvent: {}
+[10.776487] (-) TimerEvent: {}
+[10.877505] (-) TimerEvent: {}
+[10.980446] (-) TimerEvent: {}
+[11.081548] (-) TimerEvent: {}
+[11.185619] (-) TimerEvent: {}
+[11.287514] (-) TimerEvent: {}
+[11.388450] (-) TimerEvent: {}
+[11.490182] (-) TimerEvent: {}
+[11.593056] (-) TimerEvent: {}
+[11.694564] (-) TimerEvent: {}
+[11.796003] (-) TimerEvent: {}
+[11.898133] (-) TimerEvent: {}
+[11.999621] (-) TimerEvent: {}
+[12.101125] (-) TimerEvent: {}
+[12.202883] (-) TimerEvent: {}
+[12.304671] (-) TimerEvent: {}
+[12.406281] (-) TimerEvent: {}
+[12.508773] (-) TimerEvent: {}
+[12.613358] (-) TimerEvent: {}
+[12.723781] (-) TimerEvent: {}
+[12.825762] (-) TimerEvent: {}
+[12.927575] (-) TimerEvent: {}
+[13.030394] (-) TimerEvent: {}
+[13.136510] (-) TimerEvent: {}
+[13.240059] (-) TimerEvent: {}
+[13.341671] (-) TimerEvent: {}
+[13.443399] (-) TimerEvent: {}
+[13.544752] (-) TimerEvent: {}
+[13.563123] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found kdl_parser: 2.11.0 (/opt/ros/jazzy/share/kdl_parser/cmake)\n'}
+[13.609155] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[13.612092] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[13.612816] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[13.645578] (-) TimerEvent: {}
+[13.653672] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found ament_cmake_pytest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)\n'}
+[13.747406] (-) TimerEvent: {}
+[13.848337] (-) TimerEvent: {}
+[13.950449] (-) TimerEvent: {}
+[14.053427] (-) TimerEvent: {}
+[14.154589] (-) TimerEvent: {}
+[14.255851] (-) TimerEvent: {}
+[14.358011] (-) TimerEvent: {}
+[14.459454] (-) TimerEvent: {}
+[14.515504] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[14.550027] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found launch_testing_ament_cmake: 3.4.10 (/opt/ros/jazzy/share/launch_testing_ament_cmake/cmake)\n'}
+[14.560094] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[14.560621] (-) TimerEvent: {}
+[14.663061] (-) TimerEvent: {}
+[14.764395] (-) TimerEvent: {}
+[14.870094] (-) TimerEvent: {}
+[14.971457] (-) TimerEvent: {}
+[15.073534] (-) TimerEvent: {}
+[15.177225] (-) TimerEvent: {}
+[15.280848] (-) TimerEvent: {}
+[15.382876] (-) TimerEvent: {}
+[15.485488] (-) TimerEvent: {}
+[15.587428] (-) TimerEvent: {}
+[15.671601] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[15.688476] (-) TimerEvent: {}
+[15.791212] (-) TimerEvent: {}
+[15.892424] (-) TimerEvent: {}
+[15.995123] (-) TimerEvent: {}
+[16.040969] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Configuring done (10.3s)\n'}
+[16.095416] (-) TimerEvent: {}
+[16.197340] (-) TimerEvent: {}
+[16.224803] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[16.282867] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Build files have been written to: /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7\n'}
+[16.298389] (-) TimerEvent: {}
+[16.329973] (ros2_control_demo_example_7) CommandEnded: {'returncode': 0}
+[16.333743] (ros2_control_demo_example_7) JobProgress: {'identifier': 'ros2_control_demo_example_7', 'progress': 'build'}
+[16.347267] (ros2_control_demo_example_7) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', '--', '-j10', '-l10'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[16.400342] (-) TimerEvent: {}
+[16.502442] (-) TimerEvent: {}
+[16.606364] (-) TimerEvent: {}
+[16.712911] (-) TimerEvent: {}
+[16.817383] (-) TimerEvent: {}
+[16.922718] (-) TimerEvent: {}
+[17.025402] (-) TimerEvent: {}
+[17.126297] (-) TimerEvent: {}
+[17.229307] (-) TimerEvent: {}
+[17.286575] (ros2_control_demo_example_7) StdoutLine: {'line': b'[ 40%] Built target send_trajectory\n'}
+[17.330793] (-) TimerEvent: {}
+[17.432341] (-) TimerEvent: {}
+[17.535317] (-) TimerEvent: {}
+[17.636646] (-) TimerEvent: {}
+[17.739351] (-) TimerEvent: {}
+[17.763408] (ros2_control_demo_example_7) StdoutLine: {'line': b'[100%] Built target ros2_control_demo_example_7\n'}
+[17.840838] (-) TimerEvent: {}
+[17.860620] (ros2_control_demo_example_7) CommandEnded: {'returncode': 0}
+[17.864425] (ros2_control_demo_example_7) JobProgress: {'identifier': 'ros2_control_demo_example_7', 'progress': 'install'}
+[17.864920] (ros2_control_demo_example_7) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_example_7', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[17.942353] (-) TimerEvent: {}
+[17.961161] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.966251] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[17.973016] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7//ros2_control_demo_example_7.xml\n'}
+[17.974222] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7//ros2_control_demo_example_7.xml\n'}
+[17.982995] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/include/ros2_control_demo_example_7/ros2_control_demo_example_7/r6bot_hardware.hpp\n'}
+[17.984980] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/worlds/empty.sdf\n'}
+[17.985988] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/view_r6bot.launch.py\n'}
+[17.986971] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/ros2_control/r6bot.ros2_control.xacro\n'}
+[17.988026] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/urdf/r6bot.urdf.xacro\n'}
+[17.989337] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/r6bot_controller.launch.py\n'}
+[17.989995] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/r6bot_full.launch.py\n'}
+[17.990610] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/r6bot_gazebo.launch.py\n'}
+[17.991183] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/launch/send_trajectory.launch.py\n'}
+[17.992819] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/config/moveit.yaml\n'}
+[17.993341] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/config/r6bot.srdf\n'}
+[17.993820] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/config/r6bot_controller.yaml\n'}
+[17.995327] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/ros2_control_demo_example_7/send_trajectory\n'}
+[17.996654] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/environment/library_path.sh\n'}
+[17.997239] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/environment/library_path.dsv\n'}
+[17.997937] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_example_7\n'}
+[17.998751] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_example_7\n'}
+[17.999323] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/environment/ament_prefix_path.sh\n'}
+[17.999893] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/environment/ament_prefix_path.dsv\n'}
+[18.000446] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/environment/path.sh\n'}
+[18.000885] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/environment/path.dsv\n'}
+[18.001669] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/local_setup.bash\n'}
+[18.002430] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/local_setup.sh\n'}
+[18.002988] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/local_setup.zsh\n'}
+[18.003646] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/local_setup.dsv\n'}
+[18.004361] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Symlinking: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.dsv\n'}
+[18.043326] (-) TimerEvent: {}
+[18.083509] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ament_index/resource_index/packages/ros2_control_demo_example_7\n'}
+[18.084435] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/ros2_control_demo_example_7\n'}
+[18.084997] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ament_index/resource_index/controller_interface__pluginlib__plugin/ros2_control_demo_example_7\n'}
+[18.085723] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[18.086355] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[18.087901] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/cmake/ros2_control_demo_example_7Config.cmake\n'}
+[18.088439] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/cmake/ros2_control_demo_example_7Config-version.cmake\n'}
+[18.091723] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/package.xml\n'}
+[18.092887] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/ros2_control_demo_example_7/perception_node\n'}
+[18.093517] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Installing: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/ros2_control_demo_example_7/pick_and_place_node\n'}
+[18.095925] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/ros2_control_demo_example_7/joint_sweep_demo\n'}
+[18.099026] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib/libros2_control_demo_example_7.so\n'}
+[18.101368] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/cmake/export_ros2_control_demo_example_7Export.cmake\n'}
+[18.101889] (ros2_control_demo_example_7) StdoutLine: {'line': b'-- Up-to-date: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/share/ros2_control_demo_example_7/cmake/export_ros2_control_demo_example_7Export-noconfig.cmake\n'}
+[18.111617] (ros2_control_demo_example_7) CommandEnded: {'returncode': 0}
+[18.144275] (-) TimerEvent: {}
+[18.169066] (ros2_control_demo_example_7) JobEnded: {'identifier': 'ros2_control_demo_example_7', 'rc': 0}
+[18.177124] (ros2_control_demos) JobStarted: {'identifier': 'ros2_control_demos'}
+[18.245536] (-) TimerEvent: {}
+[18.277241] (ros2_control_demos) JobProgress: {'identifier': 'ros2_control_demos', 'progress': 'cmake'}
+[18.282806] (ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '/root/ros2_ws/src/ros2_control_demos/ros2_control_demos', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[18.346528] (-) TimerEvent: {}
+[18.448476] (-) TimerEvent: {}
+[18.551305] (-) TimerEvent: {}
+[18.652401] (-) TimerEvent: {}
+[18.754371] (-) TimerEvent: {}
+[18.858170] (-) TimerEvent: {}
+[18.960314] (-) TimerEvent: {}
+[18.970399] (ros2_control_demos) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[19.061438] (-) TimerEvent: {}
+[19.165369] (-) TimerEvent: {}
+[19.267361] (-) TimerEvent: {}
+[19.368371] (-) TimerEvent: {}
+[19.470407] (-) TimerEvent: {}
+[19.486310] (ros2_control_demos) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[19.571534] (-) TimerEvent: {}
+[19.649384] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[19.672393] (-) TimerEvent: {}
+[19.773443] (-) TimerEvent: {}
+[19.878380] (-) TimerEvent: {}
+[19.979391] (-) TimerEvent: {}
+[20.082298] (-) TimerEvent: {}
+[20.183374] (-) TimerEvent: {}
+[20.287316] (-) TimerEvent: {}
+[20.389315] (-) TimerEvent: {}
+[20.490693] (-) TimerEvent: {}
+[20.592557] (-) TimerEvent: {}
+[20.693298] (-) TimerEvent: {}
+[20.797306] (-) TimerEvent: {}
+[20.799888] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[20.825515] (ros2_control_demos) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[20.827259] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[20.827919] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[20.898459] (-) TimerEvent: {}
+[20.912767] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[20.999363] (-) TimerEvent: {}
+[21.102322] (-) TimerEvent: {}
+[21.204865] (-) TimerEvent: {}
+[21.307353] (-) TimerEvent: {}
+[21.409825] (-) TimerEvent: {}
+[21.512076] (-) TimerEvent: {}
+[21.616294] (-) TimerEvent: {}
+[21.717679] (-) TimerEvent: {}
+[21.822323] (-) TimerEvent: {}
+[21.925314] (-) TimerEvent: {}
+[22.029298] (-) TimerEvent: {}
+[22.116971] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[22.130251] (-) TimerEvent: {}
+[22.143841] (ros2_control_demos) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[22.144797] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[22.146097] (ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[22.171047] (ros2_control_demos) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[22.231273] (-) TimerEvent: {}
+[22.332332] (-) TimerEvent: {}
+[22.437655] (-) TimerEvent: {}
+[22.539523] (-) TimerEvent: {}
+[22.642478] (-) TimerEvent: {}
+[22.745024] (-) TimerEvent: {}
+[22.847310] (-) TimerEvent: {}
+[22.949377] (-) TimerEvent: {}
+[23.052374] (-) TimerEvent: {}
+[23.153326] (-) TimerEvent: {}
+[23.238155] (ros2_control_demos) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[23.254246] (-) TimerEvent: {}
+[23.358335] (-) TimerEvent: {}
+[23.460334] (-) TimerEvent: {}
+[23.493733] (ros2_control_demos) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[23.561324] (-) TimerEvent: {}
+[23.662453] (-) TimerEvent: {}
+[23.765092] (-) TimerEvent: {}
+[23.868393] (-) TimerEvent: {}
+[23.970822] (-) TimerEvent: {}
+[23.977090] (ros2_control_demos) StdoutLine: {'line': b'-- Configuring done (5.6s)\n'}
+[24.010690] (ros2_control_demos) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[24.039329] (ros2_control_demos) StdoutLine: {'line': b'-- Build files have been written to: /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos\n'}
+[24.053417] (ros2_control_demos) CommandEnded: {'returncode': 0}
+[24.062125] (ros2_control_demos) JobProgress: {'identifier': 'ros2_control_demos', 'progress': 'build'}
+[24.062265] (ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', '--', '-j10', '-l10'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[24.071243] (-) TimerEvent: {}
+[24.172298] (-) TimerEvent: {}
+[24.273309] (-) TimerEvent: {}
+[24.376497] (-) TimerEvent: {}
+[24.478320] (-) TimerEvent: {}
+[24.512077] (ros2_control_demos) CommandEnded: {'returncode': 0}
+[24.514676] (ros2_control_demos) JobProgress: {'identifier': 'ros2_control_demos', 'progress': 'install'}
+[24.515874] (ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:7d747f94-8150-44ca-a678-1bdef7a31b3a', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demos', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7:/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[24.582422] (-) TimerEvent: {}
+[24.623188] (ros2_control_demos) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[24.629310] (ros2_control_demos) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[24.637816] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ament_index/resource_index/package_run_dependencies/ros2_control_demos\n'}
+[24.639515] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ament_index/resource_index/parent_prefix_path/ros2_control_demos\n'}
+[24.640523] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/environment/ament_prefix_path.sh\n'}
+[24.641580] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/environment/ament_prefix_path.dsv\n'}
+[24.642453] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/environment/path.sh\n'}
+[24.643049] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/environment/path.dsv\n'}
+[24.643543] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/local_setup.bash\n'}
+[24.644185] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/local_setup.sh\n'}
+[24.644717] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/local_setup.zsh\n'}
+[24.645366] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/local_setup.dsv\n'}
+[24.646070] (ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.dsv\n'}
+[24.683405] (-) TimerEvent: {}
+[24.728383] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ament_index/resource_index/packages/ros2_control_demos\n'}
+[24.729310] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/cmake/ros2_control_demosConfig.cmake\n'}
+[24.729873] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/cmake/ros2_control_demosConfig-version.cmake\n'}
+[24.730334] (ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demos/share/ros2_control_demos/package.xml\n'}
+[24.740523] (ros2_control_demos) CommandEnded: {'returncode': 0}
+[24.783538] (ros2_control_demos) JobEnded: {'identifier': 'ros2_control_demos', 'rc': 0}
+[24.786965] (-) TimerEvent: {}
+[24.787646] (-) EventReactorShutdown: {}

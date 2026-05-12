@@ -24,7 +24,7 @@ LAUNCH_PID=$!
 
 # ---------- Wait for Gazebo + camera to be ready ----------
 echo "=== Waiting 30s for everything to start ==="
-sleep 30
+sleep 35
 
 # ---------- Spawn cubes ----------
 echo "=== Spawning ${N_CUBES} cubes ==="

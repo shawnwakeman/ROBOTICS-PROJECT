@@ -20,20 +20,42 @@ import tempfile
 import re
 import os
 import numpy as np
-
 import ikpy.chain
 
-# Joint names used by the ros2_controller (for trajectory publishing and JointState)
+# Joint names used by the ros2_controller (trajectory publishing & JointState)
 JOINTS = ['joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6']
 
-# Link names as ikpy sees them in the URDF chain (child link of each revolute joint above)
+# Link names as ikpy sees them — child link of each revolute joint above
 LINK_NAMES = ['link_1', 'link_2', 'link_3', 'link_4', 'link_5', 'link_6']
 
-# Bin drop positions in world frame
+# Arm base in world frame (from URDF base_joint origin)
+BASE_X = 0.0
+BASE_Y = -0.8
+BASE_Z = 0.75
+
+# Gripper geometry (tool0 to finger contact, pointing down)
+# gripper_*_joint origin xyz="0 ±0.05 0.05", finger box size 0.02 0.05 0.10
+# → finger center is 0.05m below tool0, finger spans 0.10m below tool0
+FINGER_CENTER_DEPTH = 0.05   # tool0 to finger center when Z-axis points down
+FINGER_TIP_DEPTH    = 0.10   # tool0 to fingertip
+
+# Approach / grasp offsets relative to cube-top z (base frame)
+# Perception gives cube TOP surface; fingers straddle the cube when tool0 is
+# FINGER_CENTER_DEPTH above the cube top → grasp_z = rz + FINGER_CENTER_DEPTH
+GRASP_OFFSET    = 0.27    # tool0 height above cube so fingers straddle it
+                           # tool0 → finger_origin = 0.05m, finger is 0.10m tall
+                           # finger center at tool0 - 0.05, tips at tool0 - 0.10
+                           # we want finger CENTER at cube center
+APPROACH_OFFSET = 0.40    # well above cube
+GRASP_FLOOR     = -0.05   # allow tool0 to go slightly below base origin                   # never let tool0 go below 8 cm (table safety)
+
+# Bin drop positions in arm-base frame (world - base)
+# Bins in world: x=1.05, y={-0.4, 0.0, 0.4}, z origin at 0.75 + 0.30 wall = rim at 1.05
+# Drop 5 cm above rim → z = 1.10 - 0.75 = 0.35 in base frame
 BIN_POSITIONS = {
-    'red':   {'x': 1.05, 'y': -0.4, 'z': 1.10},
-    'green': {'x': 1.05, 'y':  0.0, 'z': 1.10},
-    'blue':  {'x': 1.05, 'y':  0.4, 'z': 1.10},
+    'red':   (1.05 - BASE_X, -0.4 - BASE_Y, 1.10 - BASE_Z),
+    'green': (1.05 - BASE_X,  0.0 - BASE_Y, 1.10 - BASE_Z),
+    'blue':  (1.05 - BASE_X,  0.4 - BASE_Y, 1.10 - BASE_Z),
 }
 
 
@@ -44,39 +66,34 @@ class PickAndPlaceNode(Node):
         self.chain = None
         self.current_joints = [0.0] * 6
         self.is_moving = False
+        self.processed_cubes = []
 
-        # Publishers
         self.arm_pub = self.create_publisher(
             JointTrajectory, '/r6bot_controller/joint_trajectory', 10)
         self.gripper_pub = self.create_publisher(
             Float64MultiArray, '/gripper_controller/commands', 10)
 
-        # Subscribers
         self.create_subscription(
             JointState, '/joint_states', self.joint_state_callback, 10)
         self.create_subscription(
             String, '/detected_cubes', self.detection_callback, 10)
 
-        # Fetch URDF from robot_description to build IK chain dynamically
-        qos_profile = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
+        qos = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
         self.create_subscription(
-            String, '/robot_description', self.urdf_callback, qos_profile)
+            String, '/robot_description', self.urdf_callback, qos)
 
         self.get_logger().info('Pick-and-place node started — waiting for URDF & detections...')
 
     def joint_state_callback(self, msg):
-        """Keep track of the current joint positions."""
         for i, name in enumerate(msg.name):
             if name in JOINTS:
-                idx = JOINTS.index(name)
-                self.current_joints[idx] = msg.position[i]
+                self.current_joints[JOINTS.index(name)] = msg.position[i]
 
     def urdf_callback(self, msg):
-        """Build the kinematic chain directly from the URDF string."""
         if self.chain is not None:
             return
 
-        self.get_logger().info('Received URDF. Initializing ikpy solver...')
+        self.get_logger().info('Received URDF — initializing ikpy chain...')
 
         # Strip gripper joints so the chain ends at tool0
         clean_urdf = re.sub(r'<joint name="gripper.*?</joint>', '', msg.data, flags=re.DOTALL)
@@ -88,31 +105,24 @@ class PickAndPlaceNode(Node):
         try:
             import warnings
             with warnings.catch_warnings():
-                warnings.simplefilter("ignore")
+                warnings.simplefilter('ignore')
 
-                # Load once to inspect link names, then reload with the active mask
                 temp_chain = ikpy.chain.Chain.from_urdf_file(temp_path)
 
-                # Debug: see what ikpy calls each link
-                for i, link in enumerate(temp_chain.links):
-                    self.get_logger().info(f'  Link {i}: name={link.name}, joint_type={link.joint_type}')
-
-                # ikpy link names are the URDF link names (link_1..link_6, not joint_1..joint_6)
-                active_mask = [link.joint_type != 'fixed' for link in temp_chain.links]
+                # Active = any non-fixed joint (revolute/prismatic)
+                active_mask = [lnk.joint_type != 'fixed' for lnk in temp_chain.links]
 
                 self.chain = ikpy.chain.Chain.from_urdf_file(
                     temp_path, active_links_mask=active_mask)
 
             self.get_logger().info(
-                f'ikpy IK initialized. {len(self.chain.links)} links, '
-                f'{sum(active_mask)} active joints.')
+                f'ikpy ready — {len(self.chain.links)} links, {sum(active_mask)} active')
         except Exception as e:
-            self.get_logger().error(f'Failed to initialize ikpy: {e}')
+            self.get_logger().error(f'Failed to init ikpy: {e}')
         finally:
             os.remove(temp_path)
 
     def detection_callback(self, msg):
-        """Receive detected cubes and trigger pick-and-place in a separate thread."""
         if self.is_moving or self.chain is None:
             return
 
@@ -120,74 +130,115 @@ class PickAndPlaceNode(Node):
         if not detections:
             return
 
-        self.get_logger().info(f'Received {len(detections)} cube detections. Starting sequence.')
-        threading.Thread(target=self.process_cubes, args=(detections,)).start()
+        new_cubes = [d for d in detections if not self._already_processed(d)]
+        if not new_cubes:
+            return
+
+        self.get_logger().info(
+            f'{len(new_cubes)} new cubes to pick '
+            f'(filtered {len(detections) - len(new_cubes)} already done)')
+        threading.Thread(target=self.process_cubes, args=(new_cubes,), daemon=True).start()
+
+    def _already_processed(self, cube, threshold=0.05):
+        return any(
+            abs(cube['x'] - px) < threshold and abs(cube['y'] - py) < threshold
+            for px, py in self.processed_cubes
+        )
 
     def process_cubes(self, detections):
         self.is_moving = True
 
         for cube in detections:
-            x, y = cube['x'], cube['y']
             color = cube['color']
 
-            self.get_logger().info(f'Picking up {color} cube at ({x:.2f}, {y:.2f})')
+            # Convert world → arm-base frame
+            rx = cube['x'] - BASE_X
+            ry = cube['y'] - BASE_Y
+            rz = cube['z'] - BASE_Z   # cube TOP surface in base frame
 
-            # 1. Move above the cube
-            self.move_arm_to(x, y, 0.95)
-            # 2. Open Gripper
+            grasp_z    = max(GRASP_FLOOR, rz + GRASP_OFFSET)
+            approach_z = rz + APPROACH_OFFSET
+
+            self.get_logger().info(
+                f'Picking {color} cube | world({cube["x"]:.3f},{cube["y"]:.3f},{cube["z"]:.3f}) '
+                f'base({rx:.3f},{ry:.3f},{rz:.3f}) '
+                f'approach_z={approach_z:.3f} grasp_z={grasp_z:.3f}')
+
+            # ── 1. Open gripper ──────────────────────────────────────────
             self.open_gripper()
-            # 3. Lower to grasp (cube center ~0.78, grip slightly above)
-            self.move_arm_to(x, y, 0.85)
-            # 4. Close Gripper
+
+            # ── 2. Move above cube ───────────────────────────────────────
+            if not self.move_arm_to(rx, ry, approach_z):
+                self.get_logger().warn(f'Cannot reach approach for {color}, skipping')
+                continue
+
+            # ── 3. Lower to grasp ────────────────────────────────────────
+            if not self.move_arm_to(rx, ry, grasp_z):
+                self.get_logger().warn(f'Cannot reach grasp for {color}, skipping')
+                self.move_arm_to(rx, ry, approach_z)   # back up safely
+                continue
+
+            # ── 4. Close gripper ─────────────────────────────────────────
             self.close_gripper()
-            # 5. Lift up
-            self.move_arm_to(x, y, 0.95)
 
-            # 6. Move to bin
-            bin_pos = BIN_POSITIONS.get(color, BIN_POSITIONS['red'])
-            self.move_arm_to(bin_pos['x'], bin_pos['y'], bin_pos['z'])
+            # ── 5. Lift cube ──────────────────────────────────────────────
+            self.move_arm_to(rx, ry, approach_z)
 
-            # 7. Release
+            # ── 6. Carry to bin ───────────────────────────────────────────
+            bx, by, bz = BIN_POSITIONS.get(color, BIN_POSITIONS['red'])
+            # Transit height: high enough to clear the cube and bin walls
+            transit_z = max(approach_z, bz + 0.10)
+            self.move_arm_to(bx, by, transit_z)
+
+            # ── 7. Release ────────────────────────────────────────────────
             self.open_gripper()
 
-            # 8. Return home
+            self.processed_cubes.append((cube['x'], cube['y']))
+            self.get_logger().info(
+                f'Placed {color} cube — {len(self.processed_cubes)} total processed')
+
+            # ── 8. Return home ────────────────────────────────────────────
             self.move_to_home()
-            break  # one cube per trigger; let perception redetect the rest
+            break   # one cube per trigger; perception will re-detect the rest
 
         self.is_moving = False
-        self.get_logger().info('Sequence complete, ready for next detection.')
+        self.get_logger().info('Sequence complete — ready for next detection')
+
+    # ── IK / motion helpers ───────────────────────────────────────────────────
 
     def move_arm_to(self, x, y, z):
         q_init = [0.0] * len(self.chain.links)
         for i, link in enumerate(self.chain.links):
-            if link.name in JOINTS:                  # was LINK_NAMES
-                idx = JOINTS.index(link.name)        # was LINK_NAMES
-                q_init[i] = self.current_joints[idx]
+            if link.name in JOINTS:                              # not LINK_NAMES
+                q_init[i] = self.current_joints[JOINTS.index(link.name)]
 
         target = [x, y, z]
+
         ik_sol = self.chain.inverse_kinematics(
-            target_position=target, initial_position=q_init)
+            target_position=target,
+            target_orientation=np.array([0.0, 0.0, -1.0]),
+            orientation_mode='Z',
+            initial_position=q_init,
+        )
 
         best_joints = [0.0] * 6
-        best_joints = [max(-3.14, min(3.14, j)) for j in best_joints]
         for i, link in enumerate(self.chain.links):
-            if link.name in JOINTS:                  # was LINK_NAMES
-                idx = JOINTS.index(link.name)        # was LINK_NAMES
-                best_joints[idx] = ik_sol[i]
-        # ... rest unchanged
-        # Verify with FK
+            if link.name in JOINTS:                              # not LINK_NAMES
+                best_joints[JOINTS.index(link.name)] = ik_sol[i]
+
+        best_joints = [max(-3.14, min(3.14, j)) for j in best_joints]
+
+            # FK sanity check
         fk_pos = self.chain.forward_kinematics(ik_sol)[:3, 3]
         err = np.linalg.norm(fk_pos - np.array(target))
 
         if err > 0.05:
             self.get_logger().warn(
-                f'IK failed for ({x}, {y}, {z}) — out of reach? (err: {err:.3f}m)')
+                f'IK failed for ({x:.3f},{y:.3f},{z:.3f}) — err {err:.3f} m')
             return False
 
-        # Add this right before send_trajectory in move_arm_to:
-        self.get_logger().info(f'IK target: ({x}, {y}, {z})')
-        self.get_logger().info(f'IK solution: {[f"{v:.3f}" for v in best_joints]}')
-        self.get_logger().info(f'FK error: {err:.4f}m')
+        self.get_logger().info(
+            f'→ ({x:.3f},{y:.3f},{z:.3f})  FK err={err:.4f} m')
         self.send_trajectory(self.current_joints, best_joints, duration=2.5)
         return True
 
@@ -198,21 +249,13 @@ class PickAndPlaceNode(Node):
 
         for i in range(n_pts):
             t = i / (n_pts - 1) * duration
-            alpha = (1.0 - math.cos(math.pi * t / duration)) / 2.0
-            # Analytical derivative of the cosine profile
+            alpha     = (1.0 - math.cos(math.pi * t / duration)) / 2.0
             alpha_dot = math.pi / (2.0 * duration) * math.sin(math.pi * t / duration)
 
             pt = JointTrajectoryPoint()
-            pt.positions = [
-                start_joints[j] + alpha * (end_joints[j] - start_joints[j])
-                for j in range(6)
-            ]
-            pt.velocities = [
-                alpha_dot * (end_joints[j] - start_joints[j])
-                for j in range(6)
-            ]
-            pt.time_from_start = Duration(
-                sec=int(t), nanosec=int((t % 1) * 1e9))
+            pt.positions  = [start_joints[j] + alpha     * (end_joints[j] - start_joints[j]) for j in range(6)]
+            pt.velocities = [                  alpha_dot * (end_joints[j] - start_joints[j]) for j in range(6)]
+            pt.time_from_start = Duration(sec=int(t), nanosec=int((t % 1) * 1e9))
             traj.points.append(pt)
 
         self.arm_pub.publish(traj)
@@ -224,16 +267,16 @@ class PickAndPlaceNode(Node):
         self.gripper_pub.publish(msg)
         time.sleep(1.0)
 
-    def open_gripper(self):
-        self.get_logger().info('Opening Gripper')
-        self.set_gripper(-0.04, 0.04)
-
     def close_gripper(self):
-        self.get_logger().info('Closing Gripper')
-        self.set_gripper(0.0, 0.0)
+        self.get_logger().info('Closing gripper')
+        self.set_gripper(-0.06, 0.06)   
+
+    def open_gripper(self):
+        self.get_logger().info('Opening gripper')
+        self.set_gripper(0.0, 0.0)    
 
     def move_to_home(self):
-        self.get_logger().info('Moving to home position')
+        self.get_logger().info('Returning home')
         self.send_trajectory(self.current_joints, [0.0] * 6, duration=2.5)
 
 
@@ -247,6 +290,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

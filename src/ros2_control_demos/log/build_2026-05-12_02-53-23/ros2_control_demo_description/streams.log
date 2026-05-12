@@ -1,0 +1,71 @@
+[0.109s] Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description
+[0.950s] -- The C compiler identification is GNU 13.3.0
+[1.548s] -- The CXX compiler identification is GNU 13.3.0
+[1.722s] -- Detecting C compiler ABI info
+[2.916s] -- Detecting C compiler ABI info - done
+[2.944s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.945s] -- Detecting C compile features
+[2.946s] -- Detecting C compile features - done
+[3.035s] -- Detecting CXX compiler ABI info
+[4.254s] -- Detecting CXX compiler ABI info - done
+[4.289s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.290s] -- Detecting CXX compile features
+[4.290s] -- Detecting CXX compile features - done
+[4.321s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.160s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.384s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.734s] -- Configuring done (5.5s)
+[5.772s] -- Generating done (0.0s)
+[5.796s] -- Build files have been written to: /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description
+[5.812s] Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description
+[5.820s] Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description -- -j10 -l10
+[6.273s] Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description -- -j10 -l10
+[6.371s] Invoking command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description
+[6.456s] -- Install configuration: ""
+[6.462s] -- Execute custom install script
+[6.476s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/rrbot/urdf/rrbot.materials.xacro
+[6.477s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/rrbot/urdf/rrbot_description.urdf.xacro
+[6.479s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/rrbot/rviz/rrbot.rviz
+[6.480s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot.materials.xacro
+[6.481s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot_description.urdf.xacro
+[6.482s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot.rviz
+[6.483s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot_view.rviz
+[6.484s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/urdf/carlikebot.materials.xacro
+[6.485s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/urdf/carlikebot_description.urdf.xacro
+[6.487s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/rviz/carlikebot.rviz
+[6.487s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/carlikebot/rviz/carlikebot_view.rviz
+[6.489s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r3bot/urdf/threedofbot_description.urdf.xacro
+[6.492s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_0.stl
+[6.493s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_1.stl
+[6.493s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_2.stl
+[6.494s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_3.stl
+[6.494s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_4.stl
+[6.495s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_5.stl
+[6.495s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/collision/link_6.stl
+[6.496s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_0.dae
+[6.496s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_1.dae
+[6.497s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_2.dae
+[6.498s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_3.dae
+[6.498s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_4.dae
+[6.499s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_5.dae
+[6.499s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/meshes/visual/link_6.dae
+[6.501s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/srdf/r6bot.srdf
+[6.502s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/urdf/inc/create_link.xacro
+[6.503s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/urdf/r6bot_description.urdf.xacro
+[6.504s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/r6bot/rviz/view_robot.rviz
+[6.506s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_description
+[6.507s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_description
+[6.507s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.sh
+[6.509s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.dsv
+[6.509s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.sh
+[6.510s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.dsv
+[6.510s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.bash
+[6.511s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.sh
+[6.511s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.zsh
+[6.512s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.dsv
+[6.512s] -- Symlinking: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv
+[6.589s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ament_index/resource_index/packages/ros2_control_demo_description
+[6.589s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig.cmake
+[6.590s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig-version.cmake
+[6.591s] -- Up-to-date symlink: /root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description/share/ros2_control_demo_description/package.xml
+[6.605s] Invoked command in '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description

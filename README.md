@@ -1,38 +1,41 @@
-## Rebuilding After Code Changes
+# Robotics Project
 
-If you edit any files in `src/`, rebuild inside the browser terminal:
+github repo: https://github.com/shawnwakeman/ROBOTICS-PROJECT
+## Running the Project
 
-```bash
-cd ~/ros2_ws
-colcon build
-source install/setup.bash
-```
-
-Then relaunch the simulation.
-
----
-
-## Stopping Everything
+### 1. Build the Docker image
 
 ```bash
-docker compose down
+docker compose build
 ```
 
----
+### 2. Start the container
 
-cd ros2_control_demos
-colcon build --symlink-install
-source install/setup.bash
-ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
-
-cmd to rebuild docker container without cached files:
-
-
-# 1. Stop and remove the broken container
-docker compose down
-
-# 2. Build from scratch (forces the ARM64 download and uses the right bash script)
-docker compose build --no-cache
-
-# 3. Start the container
+```bash
 docker compose up
+```
+
+### 3. Open the simulation UI
+
+Navigate to [http://localhost:8080](http://localhost:8080) in your browser.
+
+### 4. Launch the full simulation with the build script
+
+```bash
+cd ~/ros2_ws/src/ros2_control_demos
+bash run_full.sh
+```
+
+## Stopping
+
+```bash
+docker compose down
+```
+
+## Force Rebuild (no cache)
+
+```bash
+docker compose down
+docker compose build --no-cache
+docker compose up
+```

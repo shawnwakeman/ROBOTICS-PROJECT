@@ -1,0 +1,46 @@
+[0.000000] (-) TimerEvent: {}
+[0.001686] (ros2_control_demo_description) JobQueued: {'identifier': 'ros2_control_demo_description', 'dependencies': OrderedDict()}
+[0.004078] (ros2_control_demo_example_7) JobQueued: {'identifier': 'ros2_control_demo_example_7', 'dependencies': OrderedDict({'ros2_control_demo_description': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description'})}
+[0.004434] (ros2_control_demos) JobQueued: {'identifier': 'ros2_control_demos', 'dependencies': OrderedDict({'ros2_control_demo_description': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description', 'ros2_control_demo_example_7': '/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_example_7'})}
+[0.004613] (ros2_control_demo_description) JobStarted: {'identifier': 'ros2_control_demo_description'}
+[0.062931] (ros2_control_demo_description) JobProgress: {'identifier': 'ros2_control_demo_description', 'progress': 'cmake'}
+[0.065274] (ros2_control_demo_description) Command: {'cmd': ['/usr/bin/cmake', '/root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/ros2_control_demos/install/ros2_control_demo_description'], 'cwd': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': '38e570674d31', 'SHLVL': '2', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src/ros2_control_demos', 'ROS_PYTHON_VERSION': '3', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'TERMINATOR_UUID': 'urn:uuid:332cff97-6727-4732-868a-542fbf1610a2', 'GALLIUM_DRIVER': 'llvmpipe', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.097930] (-) TimerEvent: {}
+[0.199922] (-) TimerEvent: {}
+[0.302809] (-) TimerEvent: {}
+[0.404916] (-) TimerEvent: {}
+[0.506151] (-) TimerEvent: {}
+[0.608260] (-) TimerEvent: {}
+[0.710173] (-) TimerEvent: {}
+[0.812066] (-) TimerEvent: {}
+[0.914066] (-) TimerEvent: {}
+[1.015907] (-) TimerEvent: {}
+[1.051600] (ros2_control_demo_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.117199] (-) TimerEvent: {}
+[1.219212] (-) TimerEvent: {}
+[1.320994] (-) TimerEvent: {}
+[1.424899] (-) TimerEvent: {}
+[1.527166] (-) TimerEvent: {}
+[1.629074] (-) TimerEvent: {}
+[1.730269] (-) TimerEvent: {}
+[1.832043] (-) TimerEvent: {}
+[1.886616] (ros2_control_demo_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.933147] (-) TimerEvent: {}
+[2.035001] (-) TimerEvent: {}
+[2.119061] (ros2_control_demo_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.135987] (-) TimerEvent: {}
+[2.237102] (-) TimerEvent: {}
+[2.338942] (-) TimerEvent: {}
+[2.441332] (-) TimerEvent: {}
+[2.545136] (-) TimerEvent: {}
+[2.647197] (-) TimerEvent: {}
+[2.748114] (-) TimerEvent: {}
+[2.849193] (-) TimerEvent: {}
+[2.950176] (-) TimerEvent: {}
+[3.051959] (-) TimerEvent: {}
+[3.094821] (ros2_control_demo_description) CommandEnded: {'returncode': -2}
+[3.153062] (-) TimerEvent: {}
+[3.199149] (ros2_control_demo_description) JobEnded: {'identifier': 'ros2_control_demo_description', 'rc': 'SIGINT'}
+[3.213251] (ros2_control_demo_example_7) JobSkipped: {'identifier': 'ros2_control_demo_example_7'}
+[3.213821] (ros2_control_demos) JobSkipped: {'identifier': 'ros2_control_demos'}
+[3.214323] (-) EventReactorShutdown: {}

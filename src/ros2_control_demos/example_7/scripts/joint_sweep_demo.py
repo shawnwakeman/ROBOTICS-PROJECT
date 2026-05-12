@@ -1,12 +1,4 @@
-#!/usr/bin/env python3
-"""
-Joint sweep demo — moves all 6 arm joints 0 → 90° → 0 in a repeating loop.
-Publishes JointTrajectory to /r6bot_controller/joint_trajectory.
 
-Uses a sinusoidal position+velocity profile with many waypoints, matching
-the approach of send_trajectory.cpp so GazeboSimSystem gets non-zero
-velocity commands throughout the motion.
-"""
 
 import math
 import rclpy
@@ -22,10 +14,7 @@ REPEAT_PERIOD = SWEEP_SECS * 2 + 2.0  # pause between sweeps
 
 
 def _build_leg(start_rad, end_rad, duration, n_pts, t_offset):
-    """
-    One leg of the sweep using a raised-cosine (smooth step) position profile.
-    Velocities are the analytical derivative — non-zero throughout the motion.
-    """
+
     points = []
     n = len(JOINTS)
     for i in range(n_pts):

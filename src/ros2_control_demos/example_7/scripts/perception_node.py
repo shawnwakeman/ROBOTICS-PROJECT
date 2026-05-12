@@ -157,17 +157,6 @@ class CubePerceptionNode(Node):
                 throttle_duration_sec=2.0)
 
     def pixel_to_world(self, u, v):
-        """
-        Convert pixel (u, v) to world (x, y, z) using depth + intrinsics.
-
-        Camera is overhead looking straight down with rpy="0 pi/2 0".
-        Gazebo camera convention: +X forward, +Y left, +Z up.
-        With Ry(pi/2): camera +X -> world -Z, camera +Y -> world +Y, camera +Z -> world +X.
-
-        Image mapping:
-          u (column, right) -> camera -Y -> world -Y
-          v (row, down)     -> camera -Z -> world -X
-        """
         if self.depth_image is None or self.camera_info is None:
             return None
 
