@@ -109,6 +109,10 @@ install(PROGRAMS scripts/pick_and_place_node.py
   DESTINATION lib/${PROJECT_NAME}
   RENAME pick_and_place_node)
 
+install(PROGRAMS scripts/joint_sweep_demo.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME joint_sweep_demo)
+
 install(TARGETS ros2_control_demo_example_7
   EXPORT export_ros2_control_demo_example_7
   ARCHIVE DESTINATION lib

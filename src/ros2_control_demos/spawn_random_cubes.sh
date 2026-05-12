@@ -6,7 +6,7 @@
 #   size: cube side length in meters (default: 0.04)
 
 N=${1:-5}
-SIZE=${2:-0.04}
+SIZE=${2:-0.06}
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 COLORS=("red" "green" "blue")

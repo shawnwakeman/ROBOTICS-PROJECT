@@ -12,7 +12,8 @@
 #   bash spawn_cube.sh 0.5 1.0 45 blue             # blue cube rotated 45°
 #   bash spawn_cube.sh 1.0 0.8 0 green 0.05        # green 5cm cube
 
-source ~/ros2_ws/src/ros2_control_demos/install/setup.bash
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "$SCRIPT_DIR/install/setup.bash"
 
 TABLE_X=${1:?  "Usage: bash spawn_cube.sh X Y [rotation_deg] [color] [size]"}
 TABLE_Y=${2:?  "Provide Y (0-1.6, back to front)"}

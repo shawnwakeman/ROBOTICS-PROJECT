@@ -1,0 +1,6 @@
+[0.066s] Invoking command in '/root/ros2_ws/src./ros2_control_demos/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src./ros2_control_demos/build/ros2_control_demo_description -- -j10 -l10
+[0.147s] [0mCMake Error: The current CMakeCache.txt directory /root/ros2_ws/src./ros2_control_demos/build/ros2_control_demo_description/CMakeCache.txt is different than the directory /root/ros2_ws/src/ros2_control_demos/build/ros2_control_demo_description where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.270s] [0mCMake Error: The source directory "/root/ros2_ws/src/ros2_control_demos/ros2_control_demo_description" does not exist.
+[0.270s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.284s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.291s] Invoked command in '/root/ros2_ws/src./ros2_control_demos/build/ros2_control_demo_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/ros2_ws/src./ros2_control_demos/build/ros2_control_demo_description -- -j10 -l10

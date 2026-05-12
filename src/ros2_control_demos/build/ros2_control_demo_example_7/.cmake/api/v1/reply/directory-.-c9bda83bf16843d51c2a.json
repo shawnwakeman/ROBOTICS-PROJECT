@@ -126,50 +126,68 @@
 				"parent" : 0
 			},
 			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 17
+			},
+			{
+				"command" : 0,
+				"file" : 6,
+				"line" : 39,
+				"parent" : 18
+			},
+			{
+				"command" : 1,
+				"file" : 5,
+				"line" : 116,
+				"parent" : 0
+			},
+			{
 				"command" : 5,
 				"file" : 0,
 				"line" : 37,
-				"parent" : 17
+				"parent" : 20
 			},
 			{
 				"command" : 0,
 				"file" : 7,
 				"line" : 50,
-				"parent" : 18
+				"parent" : 21
 			},
 			{
 				"command" : 7,
 				"file" : 5,
-				"line" : 136,
+				"line" : 140,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 10,
 				"line" : 66,
-				"parent" : 20
+				"parent" : 23
 			},
 			{
 				"command" : 2,
 				"file" : 9,
 				"line" : 48,
-				"parent" : 21
+				"parent" : 24
 			},
 			{
 				"file" : 8,
-				"parent" : 22
+				"parent" : 25
 			},
 			{
 				"command" : 1,
 				"file" : 8,
 				"line" : 28,
-				"parent" : 23
+				"parent" : 26
 			},
 			{
 				"command" : 0,
 				"file" : 0,
 				"line" : 43,
-				"parent" : 24
+				"parent" : 27
 			}
 		]
 	},
@@ -210,6 +228,19 @@
 		{
 			"backtrace" : 19,
 			"component" : "Unspecified",
+			"destination" : "lib/ros2_control_demo_example_7",
+			"paths" : 
+			[
+				{
+					"from" : "scripts/joint_sweep_demo.py",
+					"to" : "joint_sweep_demo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 22,
+			"component" : "Unspecified",
 			"destination" : "lib",
 			"paths" : 
 			[
@@ -220,7 +251,7 @@
 			"type" : "target"
 		},
 		{
-			"backtrace" : 25,
+			"backtrace" : 28,
 			"component" : "Unspecified",
 			"destination" : "share/ros2_control_demo_example_7/cmake",
 			"exportName" : "export_ros2_control_demo_example_7",

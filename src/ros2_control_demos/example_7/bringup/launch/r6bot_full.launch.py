@@ -118,10 +118,16 @@ def generate_launch_description():
         arguments=["r6bot_controller", "--param-file", robot_controllers],
     )
 
+    gripper_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["gripper_controller", "--param-file", robot_controllers],
+    )
+
     delay_robot_controller = RegisterEventHandler(
         event_handler=OnProcessExit(
             target_action=joint_state_broadcaster_spawner,
-            on_exit=[robot_controller_spawner],
+            on_exit=[robot_controller_spawner, gripper_controller_spawner],
         )
     )
 
@@ -141,6 +147,21 @@ def generate_launch_description():
         parameters=[{"use_sim_time": True}],
     )
 
+    # Joint sweep demo — starts after controllers are active
+    joint_sweep_demo_node = Node(
+        package="ros2_control_demo_example_7",
+        executable="joint_sweep_demo",
+        output="screen",
+        parameters=[{"use_sim_time": True}],
+    )
+
+    delay_joint_sweep = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=robot_controller_spawner,
+            on_exit=[joint_sweep_demo_node],
+        )
+    )
+
     return LaunchDescription(
         [
             gazebo,
@@ -150,6 +171,7 @@ def generate_launch_description():
             gz_spawn_entity,
             joint_state_broadcaster_spawner,
             delay_robot_controller,
+            delay_joint_sweep,
             TimerAction(period=15.0, actions=[perception_node]),
             TimerAction(period=20.0, actions=[pick_and_place_node]),
         ]

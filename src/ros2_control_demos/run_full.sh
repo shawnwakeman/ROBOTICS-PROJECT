@@ -11,9 +11,9 @@ pkill -f ros2 2>/dev/null || true
 sleep 2
 
 # ---------- Build ----------
-cd ~/ros2_ws/src/ros2_control_demos/
-colcon build --symlink-install
-source install/setup.bash
+cd "$SCRIPT_DIR"
+colcon build --symlink-install --cmake-clean-cache
+source "$SCRIPT_DIR/install/setup.bash"
 
 echo "=== Build complete ==="
 echo "=== Launching full system (Gazebo + perception + pick_and_place) ==="
@@ -28,7 +28,7 @@ sleep 30
 
 # ---------- Spawn cubes ----------
 echo "=== Spawning ${N_CUBES} cubes ==="
-source ~/ros2_ws/src/ros2_control_demos/install/setup.bash
+source "$SCRIPT_DIR/install/setup.bash"
 bash "${SCRIPT_DIR}/spawn_random_cubes.sh" "$N_CUBES"
 
 echo ""
